@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Your Cart</title>
+<style>
+body { font-family:Arial; margin:0; background:#f1f5f9; text-align:center; color:#1e3a8a;}
+nav { background:#1e3a8a; padding:15px; }
+nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+button { background:#2563eb; border:none; padding:10px 20px; color:white; border-radius:6px; cursor:pointer;}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="cart.html">Cart</a>
+</nav>
+
+<h1>Your Cart</h1>
+<p id="cartItem"></p>
+
+<button onclick="goCheckout()">Checkout</button>
+
+<script>
+document.getElementById("cartItem").innerText =
+localStorage.getItem("cart") || "Your cart is empty.";
+
+function goCheckout(){
+  window.location.href="checkout.html";
+}
+</script>
+
+</body>
+</html>
