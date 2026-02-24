@@ -1,31 +1,189 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Features - Mins</title>
+<title>Features - Mins the Rover</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { font-family:Arial; margin:0; background:#f1f5f9; color:#1e3a8a; }
-nav { background:#1e3a8a; padding:15px; text-align:center; }
-nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-section { padding:60px; text-align:center; }
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin:0;
+  background:#eef2ff;
+  color:#1e3a8a;
+}
+
+nav {
+  background:white;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration:none;
+  color:#1e3a8a;
+  margin:0 15px;
+  font-weight:600;
+}
+
+header {
+  background:linear-gradient(135deg,#3b82f6,#1e40af);
+  color:white;
+  text-align:center;
+  padding:60px 20px;
+}
+
+section {
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.feature {
+  background:white;
+  margin-bottom:20px;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.feature:hover {
+  transform:translateY(-5px);
+}
+
+.feature h3 {
+  margin:0;
+}
+
+.feature-content {
+  display:none;
+  margin-top:15px;
+  line-height:1.6;
+}
+
+.specs {
+  background:#dbeafe;
+  padding:25px;
+  border-radius:12px;
+  margin-top:40px;
+}
+
+footer {
+  background:#1e3a8a;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:60px;
+}
 </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="features.html">Features</a>
-  <a href="cart.html">Cart</a>
+  <div><strong>Mins Robotics</strong></div>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="cart.html">Cart</a>
+  </div>
 </nav>
 
+<header>
+  <h1>Explore the Innovation</h1>
+  <p>Click a feature to learn more</p>
+</header>
+
 <section>
-  <h1>Features</h1>
-  <p>360° Rolling Mobility</p>
-  <p>Voice Command Recognition</p>
-  <p>LED Emotional Display</p>
-  <p>Smart Sensors</p>
-  <p>Rechargeable Battery</p>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>360° Omni-Directional Wheels</h3>
+  <div class="feature-content">
+    Mins uses precision omni-wheels allowing movement in any direction.
+    This enables smoother navigation, tighter turns, and better indoor exploration.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Voice Recognition AI</h3>
+  <div class="feature-content">
+    Advanced voice recognition allows Mins to respond to commands,
+    learn your name patterns, and improve over time.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Autonomous Explore Mode</h3>
+  <div class="feature-content">
+    Using obstacle detection sensors, Mins can explore rooms independently
+    while safely avoiding furniture and walls.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Interactive Play Mode</h3>
+  <div class="feature-content">
+    Responds to claps, motion, and voice interaction.
+    Encourages creativity and active engagement.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Trick & Performance Mode</h3>
+  <div class="feature-content">
+    Perform spins, dances, races, and custom-programmed tricks
+    through the companion app.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>LED Emotion System</h3>
+  <div class="feature-content">
+    Dynamic LED lighting displays happiness, curiosity, sleep,
+    and excitement using expressive color patterns.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Bluetooth App Integration</h3>
+  <div class="feature-content">
+    Control speed, customize colors, update firmware,
+    and unlock new behaviors directly from your smartphone.
+  </div>
+</div>
+
+<div class="feature" onclick="toggle(this)">
+  <h3>Rechargeable Smart Battery</h3>
+  <div class="feature-content">
+    Up to 4 hours of active play per charge with intelligent
+    battery optimization and fast charging support.
+  </div>
+</div>
+
+<div class="specs">
+  <h2>Technical Specifications</h2>
+  <p><strong>Weight:</strong> 1.2 lbs</p>
+  <p><strong>Battery:</strong> Lithium-ion Rechargeable</p>
+  <p><strong>Charge Time:</strong> 2 hours</p>
+  <p><strong>Play Time:</strong> Up to 4 hours</p>
+  <p><strong>Connectivity:</strong> Bluetooth 5.0</p>
+  <p><strong>Material:</strong> Reinforced ABS Polymer</p>
+</div>
+
 </section>
+
+<footer>
+  © 2026 Mins Robotics | Innovation One Roll at a Time
+</footer>
+
+<script>
+function toggle(element){
+  let content = element.querySelector(".feature-content");
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
