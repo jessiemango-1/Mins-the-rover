@@ -1,18 +1,192 @@
-<script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-let output = "";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mins the Rover - Cart</title>
 
-if(cart.length === 0){
-  output = "Your cart is empty.";
-} else {
-  cart.forEach(item => {
-    output += "<p>" + item + "</p>";
-  });
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f4faff, #e6f2ff);
+    color: #1a1a1a;
 }
 
-document.getElementById("cartItem").innerHTML = output;
-
-function goCheckout(){
-  window.location.href="checkout.html";
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
-</script>
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 80px;
+}
+
+.cart-item {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    display: flex;
+    width: 60%;
+}
+
+.cart-item img {
+    width: 160px;
+    border-radius: 12px;
+    margin-right: 30px;
+}
+
+.item-details h2 {
+    margin: 0 0 10px 0;
+}
+
+.quantity {
+    margin-top: 15px;
+}
+
+.quantity button {
+    padding: 5px 10px;
+    border: none;
+    background: #1c2a48;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.summary {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    width: 30%;
+}
+
+.summary h3 {
+    margin-top: 0;
+}
+
+.summary div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.checkout-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1c2a48;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #2e4c8a;
+}
+
+.trust {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MINS THE ROVER</div>
+    <div class="nav">
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Reviews</a>
+        <a href="#">Cart (1)</a>
+    </div>
+</header>
+
+<div class="container">
+
+    <div class="cart-item">
+        <img src="https://via.placeholder.com/160" alt="Mins the Rover">
+        <div class="item-details">
+            <h2>Mins the Rover – Smart Companion Bot</h2>
+            <p>Color: Space Blue</p>
+            <p>Price: $49.99</p>
+
+            <div class="quantity">
+                Quantity:
+                <button>-</button>
+                1
+                <button>+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="summary">
+        <h3>Order Summary</h3>
+
+        <div>
+            <span>Subtotal</span>
+            <span>$49.99</span>
+        </div>
+
+        <div>
+            <span>Shipping</span>
+            <span>$5.00</span>
+        </div>
+
+        <div>
+            <span>Tax</span>
+            <span>$3.20</span>
+        </div>
+
+        <div class="total">
+            <span>Total</span>
+            <span>$58.19</span>
+        </div>
+
+        <button class="checkout-btn">
+            🚀 Proceed to Launch
+        </button>
+
+        <div class="trust">
+            ✔ 30-Day Adventure Guarantee<br>
+            ✔ Safe & Kid-Friendly Materials<br>
+            ✔ Free Returns
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
