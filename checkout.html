@@ -1,39 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Checkout</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mins the Rover - Checkout</title>
+
 <style>
-body { font-family:Arial; margin:0; background:#f1f5f9; text-align:center; color:#1e3a8a;}
-nav { background:#1e3a8a; padding:15px; }
-nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
-input { padding:10px; margin:10px; width:250px;}
-button { background:#2563eb; border:none; padding:10px 20px; color:white; border-radius:6px; cursor:pointer;}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f4faff, #e6f2ff);
+    color: #1a1a1a;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.logo { font-size: 22px; font-weight: bold; letter-spacing: 1px; }
+.nav a { margin-left: 20px; text-decoration: none; color: #333; font-weight: 500; }
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+.checkout-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    width: 100%;
+    max-width: 500px;
+}
+.checkout-card h2 { text-align: center; margin-bottom: 20px; }
+.checkout-card label { display: block; margin-top: 15px; font-weight: 500; }
+.checkout-card input, .checkout-card select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.checkout-btn {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: #1c2a48;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.checkout-btn:hover { background: #2e4c8a; }
+.summary {
+    margin-top: 25px;
+    background: #f0f7ff;
+    padding: 20px;
+    border-radius: 12px;
+}
+.summary div { display: flex; justify-content: space-between; margin: 8px 0; }
+.total { font-weight: bold; font-size: 18px; margin-top: 10px; }
 </style>
 </head>
 
 <body>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="features.html">Features</a>
-  <a href="cart.html">Cart</a>
-</nav>
+<header>
+    <div class="logo">MINS THE ROVER</div>
+    <div class="nav">
+        <a href="cart.html">Cart</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+    </div>
+</header>
 
-<h1>Checkout</h1>
+<div class="container">
+    <div class="checkout-card">
+        <h2>Checkout 🚀</h2>
 
-<input type="text" placeholder="Full Name"><br>
-<input type="text" placeholder="Address"><br>
-<input type="text" placeholder="Card Number"><br>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your Name">
 
-<button onclick="completeOrder()">Complete Order</button>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
 
-<script>
-function completeOrder(){
-  localStorage.removeItem("cart");
-  alert("Order placed successfully!");
-  window.location.href="index.html";
-}
-</script>
+        <label for="address">Shipping Address</label>
+        <input type="text" id="address" placeholder="123 Space Street">
+
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="City">
+
+        <label for="state">State</label>
+        <input type="text" id="state" placeholder="State">
+
+        <label for="zip">Zip Code</label>
+        <input type="text" id="zip" placeholder="12345">
+
+        <label for="payment">Payment Method</label>
+        <select id="payment">
+            <option>Credit Card</option>
+            <option>PayPal</option>
+        </select>
+
+        <div class="summary">
+            <div><span>Subtotal</span><span>$49.99</span></div>
+            <div><span>Shipping</span><span>$5.00</span></div>
+            <div><span>Tax</span><span>$3.20</span></div>
+            <div class="total"><span>Total</span><span>$58.19</span></div>
+        </div>
+
+        <a href="thankyou.html" class="checkout-btn">🚀 Complete Order</a>
+    </div>
+</div>
 
 </body>
 </html>
