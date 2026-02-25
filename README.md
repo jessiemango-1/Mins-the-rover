@@ -1,167 +1,197 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Mins the Rover</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  margin:0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background:#eef2ff;
-  color:#1e3a8a;
-}
+  <title>Mins the Rover</title>
 
-nav {
-  background:white;
-  padding:15px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #001f3f, #0074D9);
+      color: white;
+      text-align: center;
+    }
 
-nav a {
-  text-decoration:none;
-  color:#1e3a8a;
-  margin:0 15px;
-  font-weight:600;
-}
+    nav {
+      background: rgba(0,0,0,0.3);
+      padding: 15px;
+    }
 
-.hero {
-  text-align:center;
-  padding:80px 20px;
-  background:linear-gradient(135deg,#3b82f6,#1e40af);
-  color:white;
-}
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.hero h1 {
-  font-size:48px;
-  margin-bottom:10px;
-}
+    .section {
+      padding: 60px 20px;
+    }
 
-button {
-  background:#2563eb;
-  border:none;
-  padding:12px 25px;
-  color:white;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:600;
-  transition:0.3s;
-}
+    .product {
+      background: rgba(255,255,255,0.1);
+      margin: 20px auto;
+      padding: 20px;
+      width: 300px;
+      border-radius: 15px;
+    }
 
-button:hover {
-  background:#1e40af;
-  transform:scale(1.05);
-}
+    button {
+      padding: 10px 20px;
+      background: #00c3ff;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
 
-.products {
-  padding:60px 20px;
-  text-align:center;
-}
-
-.product-grid {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-  margin-top:40px;
-}
-
-.card {
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  width:260px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.card:hover {
-  transform:translateY(-8px);
-}
-
-.price {
-  font-size:20px;
-  font-weight:bold;
-  margin:10px 0;
-}
-
-footer {
-  background:#1e3a8a;
-  color:white;
-  text-align:center;
-  padding:30px;
-  margin-top:60px;
-}
-</style>
+    button:hover {
+      background: #00e1ff;
+    }
+  </style>
 </head>
 
 <body>
 
 <nav>
-  <div><strong>Mins Robotics</strong></div>
-  <div>
-    <a href="features.html">Features</a>
-    <a href="cart.html">Cart</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="cart.html">Cart</a>
 </nav>
 
-<div class="hero">
+<div class="section">
   <h1>Mins the Rover</h1>
-  <p>Innovation, One Roll at a Time</p>
-  <div class="price">$129.99</div>
-  <button onclick="addToCart('Mins the Rover - $129.99')">Add to Cart</button>
+  <h3>Innovation, one roll at a time.</h3>
+
+  <p>
+    At Mins Robotics, we believe the future of companionship is interactive,
+    intelligent, and inspiring. Mins the Rover is an AI-powered rover pet
+    designed to learn, grow, and explore with you.
+  </p>
+
+  <p>
+    Built with smart sensors, emotional interaction,
+    and learning features, Mins combines technology
+    and creativity into one rolling companion.
+  </p>
 </div>
 
-<div class="products">
-  <h2>Add-On Products</h2>
+<div class="section">
+  <h2>Our Products</h2>
 
-  <div class="product-grid">
-
-    <div class="card">
-      <h3>Obstacle Course Kit</h3>
-      <p>Build ramps and tracks for racing challenges.</p>
-      <div class="price">$29.99</div>
-      <button onclick="addToCart('Obstacle Course Kit - $29.99')">Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <h3>Custom Skin Pack</h3>
-      <p>Blue, Midnight Black, Mars Red finishes.</p>
-      <div class="price">$19.99</div>
-      <button onclick="addToCart('Custom Skin Pack - $19.99')">Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <h3>LED Expansion Pack</h3>
-      <p>Unlock new light patterns and effects.</p>
-      <div class="price">$14.99</div>
-      <button onclick="addToCart('LED Expansion Pack - $14.99')">Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <h3>Charging Dock Pro</h3>
-      <p>Fast charging premium dock.</p>
-      <div class="price">$24.99</div>
-      <button onclick="addToCart('Charging Dock Pro - $24.99')">Add to Cart</button>
-    </div>
-
+  <div class="product">
+    <h3>Mins the Rover</h3>
+    <p>$149.99</p>
+    <button onclick="addToCart('Mins the Rover', 149.99)">Add to Cart</button>
   </div>
-</div>
 
-<footer>
-  © 2026 Mins Robotics | Designed for the Future
-</footer>
+  <div class="product">
+    <h3>Extended Battery Pack</h3>
+    <p>$29.99</p>
+    <button onclick="addToCart('Extended Battery Pack', 29.99)">Add to Cart</button>
+  </div>
+
+</div>
 
 <script>
-function addToCart(item) {
+function addToCart(name, price) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push(item);
+  cart.push({name: name, price: price});
   localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Added to cart!");
+  alert(name + " added to cart!");
 }
 </script>
 
 </body>
 </html>
+
+Then scroll down and click:
+
+👉 Commit changes
+
+🛒 Step 3: Create cart.html
+
+Repeat the same steps:
+
+Add file
+
+Create new file
+
+Name it:
+
+cart.html
+
+Paste this:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+</head>
+
+<body onload="loadCart()" style="background:#001f3f; color:white; text-align:center; font-family:Arial;">
+
+<h1>Your Cart</h1>
+
+<div id="cart-items"></div>
+<h2>Total: $<span id="total"></span></h2>
+
+<button onclick="checkout()">Checkout</button>
+
+<br><br>
+<a href="index.html">Back to Home</a>
+
+<script>
+function loadCart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let total = 0;
+  let output = "";
+
+  cart.forEach(item => {
+    total += item.price;
+    output += "<p>" + item.name + " - $" + item.price + "</p>";
+  });
+
+  document.getElementById("cart-items").innerHTML = output;
+  document.getElementById("total").innerText = total.toFixed(2);
+}
+
+function checkout() {
+  localStorage.removeItem("cart");
+  alert("Purchase complete! Thank you for supporting Mins Robotics!");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
+
+Commit changes again.
+
+🌍 Step 4: Turn On GitHub Pages
+
+Go to Settings
+
+Click Pages
+
+Under Source:
+
+Choose Deploy from branch
+
+Branch: main
+
+Folder: /root
+
+Click Save
+
+Wait about 1 minute.
+
+GitHub will give you a link like:
+
+https://yourusername.github.io/repositoryname/
+
+THAT is your website.
+
+You basically just turned a README into a real online store. That’s actually impressive.
+
+If something doesn’t show up, tell me what you see and we’ll fix it together.
