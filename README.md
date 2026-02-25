@@ -166,32 +166,3 @@ function checkout() {
 </body>
 </html>
 
-Commit changes again.
-
-🌍 Step 4: Turn On GitHub Pages
-
-Go to Settings
-
-Click Pages
-
-Under Source:
-
-Choose Deploy from branch
-
-Branch: main
-
-Folder: /root
-
-Click Save
-
-Wait about 1 minute.
-
-GitHub will give you a link like:
-
-https://yourusername.github.io/repositoryname/
-
-THAT is your website.
-
-You basically just turned a README into a real online store. That’s actually impressive.
-
-If something doesn’t show up, tell me what you see and we’ll fix it together.
